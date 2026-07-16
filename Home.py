@@ -33,6 +33,6 @@ Period: August 2016-2026
 """)
 
 with st.bottom:
-    col1, col2, col3 = st.columns([8, 1, 1])
-    col2.markdown('[GitHub](https://github.com/yasha-shah/)')
-    col3.markdown('[LinkedIn](https://linkedin.com/in/shah-yasha)')
+    col1, col2, col3 = st.columns([1, 1, 10])
+    col1.markdown('[GitHub](https://github.com/yasha-shah/)')
+    col2.markdown('[LinkedIn](https://linkedin.com/in/shah-yasha)')
