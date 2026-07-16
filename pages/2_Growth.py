@@ -8,7 +8,6 @@ st.set_page_config(page_title='Growth | UPI Analysis', layout='wide', initial_si
 load_css()
 df = load_data()
 df = df[df['period'] >= '01-01-2018']
-df_mom = df
 st.title('Growth')
 
 st.sidebar.header('Filters')
@@ -16,6 +15,7 @@ fy = st.sidebar.multiselect('Select financial year', df['fy'].unique())
 if fy:
     df = df[df['fy'].isin(fy)]
 
+df_mom = df
 mom_growth_chart = px.bar(df_mom, x='period', y=['volume_growth_mom', 'value_growth_mom'], barmode='group', labels={'period': 'Month', 'value':'Growth %'})
 mom_growth_chart.update_xaxes(title='')
 mom_growth_chart.update_yaxes(title='Growth %')
